@@ -4,6 +4,14 @@ sidebar_position: 1
 
 # Tutorial Intro
 
+<Board season="season_9" champions={[{
+  position: {
+    row: 1,
+    col: 1,
+  },
+  name: 'TFT9_Jhin'
+}]} />
+
 Let's discover **Docusaurus in less than 5 minutes**.
 
 ## Getting Started
