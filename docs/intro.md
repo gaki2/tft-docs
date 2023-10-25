@@ -12,6 +12,8 @@ sidebar_position: 1
   name: 'TFT9_Jhin'
 }]} />
 
+<TraitBadge season={'season_9'} name={'자운'} />
+
 Let's discover **Docusaurus in less than 5 minutes**.
 
 ## Getting Started
