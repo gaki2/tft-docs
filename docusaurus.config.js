@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '전략적 팀 전투 공략',
-  tagline: '전략적 팀 전투 공략서 입니다.',
-  favicon: 'https://tft-utils.s3.ap-northeast-2.amazonaws.com/assets/poro.jpeg',
+  title: '롤체 공략',
+  tagline: '전략적 팀 전투 공략',
+  favicon: 'img/favicon-32x32.png',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-test-site.com',
