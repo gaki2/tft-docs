@@ -43,13 +43,23 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: '시즌 9.5',
+              path: 'Season_9B',
+            },
+            Season_9: {
+              label: '시즌 9',
+            }
+          },
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/gaki2/tft-docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -70,6 +80,9 @@ const config = {
           src: 'https://tft-utils.s3.ap-northeast-2.amazonaws.com/assets/poro.jpeg',
         },
         items: [
+          {
+            type: 'docsVersionDropdown',
+          },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
