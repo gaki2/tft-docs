@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import {ChampionBadge} from "tft-utils";
 
 type FeatureItem = {
   title: string;
