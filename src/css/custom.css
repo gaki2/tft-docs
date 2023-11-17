@@ -15,6 +15,10 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /*커스텀*/
+  /*마크다운에서 리스트 안의 p 태그들의 마진 (기본은 1rem 인데 너무 넓어서 0.5rem 으로 변경함.) */
+  --ifm-list-paragraph-margin: 0.5rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -27,4 +31,10 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+iframe#webpack-dev-server-client-overlay{display:none!important}
+
+p {
+  margin: 0;
 }
