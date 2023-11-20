@@ -42,12 +42,12 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/gaki2/tft-docs',
           lastVersion: 'current',
           versions: {
             current: {
-              label: '시즌 9.5',
-              path: 'Season_9B',
+              label: '시즌 10',
+              path: 'season10',
             },
           },
         },
@@ -97,16 +97,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: '카카오톡',
+                href: 'https://open.kakao.com/o/gMgieVSf',
               },
             ],
           },
@@ -114,13 +106,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'tft-docs GitHub',
+                href: 'https://github.com/gaki2/tft-docs',
+              },
+              {
+                label: 'tft-utils GitHub',
+                href: 'https://github.com/gaki2/tft-utils',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} tft-docs, Inc. Built with gaki2.`,
       },
       prism: {
         theme: lightCodeTheme,

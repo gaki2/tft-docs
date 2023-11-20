@@ -2,51 +2,49 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import {ChampionBadge} from "tft-utils";
+import Link from "@docusaurus/Link";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  url: string;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '공략 기여',
+    url: require('@site/static/img/poro1.png').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        공략 기여는 언제든지 환영합니다! <Link href={'https://open.kakao.com/o/gMgieVSf'}>카카오톡</Link>으로 문의해주세요.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '깃허브 참여',
+    url: require('@site/static/img/poro2.png').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        롤체 공략 사이트를 같이 만들어가실 기여자분들은 언제든 환영입니다!
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: '버그 제보',
+    url: require('@site/static/img/poro3.png').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        버그제보는 <Link href={'https://open.kakao.com/o/gMgieVSf'}>카카오톡</Link> 혹은 <Link href={'https://github.com/gaki2/tft-docs'}>깃허브</Link>로 알려주세요! 😄
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, url, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img className={styles.featureSvg} src={url} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
