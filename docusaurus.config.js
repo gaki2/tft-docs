@@ -89,7 +89,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/Season_9B/intro',
+                to: '/docs/season10/category/1티어-덱',
               },
             ],
           },
