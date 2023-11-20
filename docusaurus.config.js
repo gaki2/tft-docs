@@ -18,7 +18,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
+  organizationName: 'gaki2', // Usually your GitHub org/user name.
   projectName: 'tft-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -78,11 +78,6 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: '공략',
-          },
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
           },
         ],
       },
