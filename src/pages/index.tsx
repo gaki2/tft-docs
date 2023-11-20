@@ -16,7 +16,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className={clsx("button button--lg", styles.header_button)}
-            to="docs/Season_9B/intro">
+            to="docs/season10/category/1티어-덱">
             공략 바로가기
           </Link>
         </div>
