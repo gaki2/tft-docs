@@ -4,21 +4,20 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import RemixRumble from '@site/static/img/remix_rumble_logo.png';
 
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero hero--primary', styles.header_wrapper)}>
       <div className={clsx("container", styles.zIndex1)}>
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <img src={RemixRumble} className={styles.header_img} />
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className={clsx("button button--lg", styles.header_button)}
             to="docs/Season_9B/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            공략 바로가기
           </Link>
         </div>
       </div>
