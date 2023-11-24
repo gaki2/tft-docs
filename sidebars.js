@@ -27,7 +27,7 @@ const sidebars = {
         keywords: ['1tier', 'op'],
         image: '/img/poro1.png',
       },
-      items: ['bilgewater'],
+      items: ['jazz_reroll', 'stage_diver'],
     },
   ],
 
