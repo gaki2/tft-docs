@@ -35,16 +35,23 @@ export const Template = () => {
     ]
   return (
     <>
-      <ChampionBadge10 name={'Lillia'} lang={'ko'} />
-        <ChampionBadge10 name={'Kaisa'} lang={'ko'} />
-      <ChampionBadge10 name={'Bard'} lang={'ko'} />
+      <ChampionBadge10 name={'Evelynn'} lang={'ko'} />
 
-      <ChampionBadge10 name={'Neeko'} lang={'ko'} />
-      <ItemBadge10 name={'DragonsClaw'} />
-      <ItemBadge10 name={'IonicSpark'} />
-      <ItemBadge10 name={'GargoyleStoneplate'} />
-      <ItemBadge10 name={'WarmogsArmor'} />
-      <ItemBadge10 name={'WarmogsArmor'} />
+      <ChampionBadge10 name={'Gnar'} lang={'ko'} />
+        <ChampionBadge10 name={'Illaoi'} lang={'ko'} />
+        <ChampionBadge10 name={'Sona'} lang={'ko'} />
+
+      <ChampionBadge10 name={'Zac'} lang={'ko'} />
+      <ItemBadge10 name={'SpearOfShojin'} />
+        <ItemBadge10 name={'GuinsoosRageblade'} />
+      <ItemBadge10 name={'JeweledGauntlet'} />
+        <ItemBadge10 name={'InfinityEdge'} />
+        <ItemBadge10 name={'EdgeOfNight'} />
+        <ItemBadge10 name={'Deathblade'} />
+
+      <ItemBadge10 name={'HandOfJustice'} />
+      <ItemBadge10 name={'EdgeOfNight'} />
+        <ItemBadge10 name={'RabadonsDeathcap'} />
 
       <AugmentBadge10 name={'Healing_Orbs_I'} />
       <AugmentBadge10 name={'Golden_Ticket'} />
