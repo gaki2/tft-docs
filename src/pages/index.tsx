@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import RemixRumble from '@site/static/img/remix_rumble_logo.png';
+import Head from '@docusaurus/Head';
 
 import styles from './index.module.css';
 
@@ -30,7 +31,10 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={'시즌 10 TFT'}
-      description="TFT, 전략적팀전투, 롤체 시즌10 공략. 롤체 공략">
+      description="롤체공략, TFT, 전략적팀전투, 롤체 시즌10 공략. 롤체 공략">
+      <Head>
+        <meta name="naver-site-verification" content="e5c139d82cd88100b1b9ec71856f8b6ad6033ade" />
+      </Head>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
