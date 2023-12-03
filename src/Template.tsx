@@ -4,63 +4,62 @@ import React from "react";
 export const Template = () => {
     const champions: BoardChampion10[] = [
         {
-            name: 'Kennen',
+            name: 'Blitzcrank',
             position: {
                 row: 0,
+                col: 3,
+            },
+            starLevel: 2,
+        },
+        {
+            name: 'Gragas',
+            position: {
+                row: 1,
                 col: 0,
             },
             starLevel: 2,
         },
         {
-            name: 'Pantheon',
+            name: 'Ekko',
             position: {
-                row: 0,
+                row: 1,
                 col: 1,
             },
             starLevel: 2,
         },
         {
-            name: 'Neeko',
+            name: 'DiscoBall',
             position: {
-                row: 0,
+                row: 1,
+                col: 2,
+            },
+        },
+        {
+            name: 'Ziggs',
+            position: {
+                row: 2,
+                col: 0,
+            },
+            starLevel: 2,
+        },
+        {
+            name: '',
+            position: {
+                row: 2,
+                col: 1,
+            },
+            starLevel: 2,
+        },
+        {
+            name: 'Nami',
+            position: {
+                row: 2,
                 col: 2,
             },
             starLevel: 2,
         },
         {
-            name: 'Amumu',
-            position: {
-                row: 0,
-                col: 3,
-            },
-            starLevel: 3,
-        },
-        {
-            name: 'Poppy',
-            position: {
-                row: 0,
-                col: 4,
-            },
-            starLevel: 2,
-        },
-        {
-            name: 'Thresh',
-            position: {
-                row: 0,
-                col: 5,
-            },
-            starLevel: 2,
-        },
-        {
-            name: 'Yorick',
-            position: {
-                row: 0,
-                col: 6,
-            },
-            starLevel: 2,
-        },
-        {
-            name: 'Karthus',
+            name: 'Blitzcrank',
             position: {
                 row: 3,
                 col: 0,
@@ -68,29 +67,34 @@ export const Template = () => {
             starLevel: 2,
         },
         {
-            name: 'Vex',
+            name: 'Lulu',
             position: {
                 row: 3,
                 col: 1,
             },
-            starLevel: 3,
+            starLevel: 2,
         }
     ]
   return (
     <>
-      <ChampionBadge10 name={'TahmKench'} lang={'ko'} />
-
-      <ChampionBadge10 name={'Lux'} lang={'ko'} />
-        <ChampionBadge10 name={'Urgot'} lang={'ko'} />
-        <ChampionBadge10 name={'Yorick'} lang={'ko'} />
+      <ChampionBadge10 name={'B'} lang={'ko'} />
+      <ChampionBadge10 name={'TwistedFate'} lang={'ko'} />
+        <ChampionBadge10 name={'Ziggs'} lang={'ko'} />
+        <ChampionBadge10 name={'Illaoi'} lang={'ko'} />
+        <ChampionBadge10 name={'Gragas'} lang={'ko'} />
+        <ChampionBadge10 name={'Sona'} lang={'ko'} />
 
       <ChampionBadge10 name={'Zac'} lang={'ko'} />
-      <ItemBadge10 name={'SpearOfShojin'} />
-        <ItemBadge10 name={'Deathblade'} />
-      <ItemBadge10 name={'JeweledGauntlet'} />
-        <ItemBadge10 name={'LastWhisper'} />
+
+
+
+      <ItemBadge10 name={'WarmogsArmor'} />
+        <ItemBadge10 name={'DragonsClaw'} />
+        <ItemBadge10 name={'BrambleVest'} />
+      <ItemBadge10 name={'GargoyleStoneplate'} />
+        <ItemBadge10 name={'Steadfast_Heart'} />
         <ItemBadge10 name={'RecurveBow'} />
-        <ItemBadge10 name={'Guardbreaker'} />
+
 
 
 
@@ -102,69 +106,59 @@ export const Template = () => {
       <AugmentBadge10 name={'Best_Friends_II'} />
       <AugmentBadge10 name={'Harmacist_II'} />
       <AugmentBadge10 name={'Three\'s_Company'} />
-        <AugmentBadge10 name={'Cluttered_Mind'} />
+
+        <AugmentBadge10 name={'Contagion'} />
         <AugmentBadge10 name={'Patient_Study'} />
         <AugmentBadge10 name={'Level_Up!'} />
 
         <Board10 champions={[
             {
-                name: 'Amumu',
-                position: {
-                    row: 0,
-                    col: 0,
-                }
-            },
-            {
-                name: 'TahmKench',
-                position: {
-                    row: 0,
-                    col: 1,
-                }
-            },
-            {
-                name: 'Sett',
-                position: {
-                    row: 0,
-                    col: 2,
-                }
-            },
-            {
-                name: 'Thresh',
-                position: {
-                    row: 0,
-                    col: 3,
-                }
-            },
-            {
-                name: 'Poppy',
-                position: {
-                    row: 0,
-                    col: 4,
-                }
-            },
-            {
-                name: 'Urgot',
+                name: 'Gragas',
                 position: {
                     row: 1,
-                    col: 2,
+                    col: 0,
                 },
-                starLevel: 3,
+                starLevel: 2,
             },
             {
-                name: 'Samira',
+                name: 'Taric',
+                position: {
+                    row: 1,
+                    col: 1,
+                },
+                starLevel: 2,
+            },
+            {
+                name: 'Kennen',
+                position: {
+                    row: 2,
+                    col: 2,
+                },
+            },
+            {
+                name: 'DiscoBall',
+                position: {
+                    row: 2,
+                    col: 1,
+                },
+                starLevel: 2,
+            },
+            {
+                name: 'Nami',
                 position: {
                     row: 3,
                     col: 0,
                 },
-                starLevel: 3,
+                starLevel: 2,
             },
             {
-                name: 'Vex',
+                name: 'Bard',
                 position: {
                     row: 3,
                     col: 1,
-                }
-            },
+                },
+                starLevel: 2,
+            }
         ]} language={'ko'} />
 
 

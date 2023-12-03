@@ -27,7 +27,7 @@ const sidebars = {
         keywords: ['1tier', 'op'],
         image: '/img/poro1.png',
       },
-      items: ['jazz_reroll', 'stage_diver','guardian_emo', 'country_reroll'],
+      items: ['jazz_reroll', 'stage_diver','guardian_emo', 'country_reroll', 'disco'],
     },
   ],
 
