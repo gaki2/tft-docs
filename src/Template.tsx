@@ -77,12 +77,12 @@ export const Template = () => {
     ]
   return (
     <>
-      <ChampionBadge10 name={'B'} lang={'ko'} />
-      <ChampionBadge10 name={'TwistedFate'} lang={'ko'} />
-        <ChampionBadge10 name={'Ziggs'} lang={'ko'} />
+      <ChampionBadge10 name={'Annie'} lang={'ko'} />
+      <ChampionBadge10 name={'Seraphine'} lang={'ko'} />
+        <ChampionBadge10 name={'Annie'} lang={'ko'} />
         <ChampionBadge10 name={'Illaoi'} lang={'ko'} />
         <ChampionBadge10 name={'Gragas'} lang={'ko'} />
-        <ChampionBadge10 name={'Sona'} lang={'ko'} />
+        <ChampionBadge10 name={'Lulu'} lang={'ko'} />
 
       <ChampionBadge10 name={'Zac'} lang={'ko'} />
 
@@ -165,40 +165,54 @@ export const Template = () => {
 
         <Board10 champions={[
             {
-                name: 'TahmKench',
+                name: 'Neeko',
+                position: {
+                    row: 0,
+                    col: 3,
+                },
+                starLevel: 3,
+            },
+            {
+                name: 'Ekko',
                 position: {
                     row: 0,
                     col: 0,
                 }
             },
             {
-                name: 'Sett',
+                name: 'Kennen',
                 position: {
                     row: 0,
-                    col: 1,
-                }
-            },
-            {
-                name: 'Urgot',
-                position: {
-                    row: 1,
                     col: 2,
                 },
-                starLevel: 3,
+                starLevel: 2,
             },
             {
-                name: 'Samira',
+                name: 'Lillia',
                 position: {
-                    row: 3,
-                    col: 0,
-                },
-                starLevel: 3,
+                    row: 0,
+                    col: 1,
+                }
             },
             {
-                name: 'Vex',
+                name: 'Seraphine',
                 position: {
                     row: 3,
                     col: 1,
+                }
+            },
+            {
+                name: 'Annie',
+                position: {
+                    row: 3,
+                    col: 0,
+                }
+            },
+            {
+                name: 'Lulu',
+                position: {
+                    row: 3,
+                    col: 0,
                 }
             },
         ]} language={'ko'} />
