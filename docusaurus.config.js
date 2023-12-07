@@ -3,13 +3,16 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const path = require("path");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '롤체 공략',
   tagline: '전략적 팀 전투 공략',
   favicon: 'img/favicon-32x32.png',
-
+  plugins: [
+      'custom-loaders',
+  ],
   // Set the production url of your site here
   url: 'https://tftutils.com',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -20,7 +23,6 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'gaki2', // Usually your GitHub org/user name.
   projectName: 'tft-docs', // Usually your repo name.
-
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
