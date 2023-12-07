@@ -77,10 +77,10 @@ export const Template = () => {
     ]
   return (
     <>
-      <ChampionBadge10 name={'Annie'} lang={'ko'} />
-      <ChampionBadge10 name={'Seraphine'} lang={'ko'} />
-        <ChampionBadge10 name={'Annie'} lang={'ko'} />
-        <ChampionBadge10 name={'Illaoi'} lang={'ko'} />
+      <ChampionBadge10 name={'Vi'} lang={'ko'} />
+      <ChampionBadge10 name={'Zac'} lang={'ko'} />
+        <ChampionBadge10 name={'Gnar'} lang={'ko'} />
+        <ChampionBadge10 name={'Yorick'} lang={'ko'} />
         <ChampionBadge10 name={'Gragas'} lang={'ko'} />
         <ChampionBadge10 name={'Lulu'} lang={'ko'} />
 
@@ -110,54 +110,105 @@ export const Template = () => {
         <AugmentBadge10 name={'Contagion'} />
         <AugmentBadge10 name={'Patient_Study'} />
         <AugmentBadge10 name={'Level_Up!'} />
-
         <Board10 champions={[
             {
-                name: 'Gragas',
+                name: 'KSante',
                 position: {
-                    row: 1,
-                    col: 0,
-                },
-                starLevel: 2,
-            },
-            {
-                name: 'Taric',
-                position: {
-                    row: 1,
-                    col: 1,
-                },
-                starLevel: 2,
-            },
-            {
-                name: 'Kennen',
-                position: {
-                    row: 2,
+                    row: 0,
                     col: 2,
                 },
-            },
-            {
-                name: 'DiscoBall',
-                position: {
-                    row: 2,
-                    col: 1,
-                },
                 starLevel: 2,
             },
             {
-                name: 'Nami',
+                name: 'Gnar',
+                position: {
+                    row: 0,
+                    col: 3,
+                },
+                starLevel: 2,
+                headliner: true,
+                headlinerTrait: 'Superfan'
+            },
+            {
+                name: 'Lillia',
+                position: {
+                    row: 0,
+                    col: 4,
+                },
+            },
+            {
+                name: 'Aphelios',
                 position: {
                     row: 3,
                     col: 0,
                 },
-                starLevel: 2,
             },
             {
-                name: 'Bard',
+                name: 'Senna',
                 position: {
                     row: 3,
                     col: 1,
                 },
+            }
+        ]} />
+        <Board10 champions={[
+            {
+                name: 'Ekko',
+                position: {
+                    row: 0,
+                    col: 5,
+                },
                 starLevel: 2,
+            },
+            {
+                name: 'Urgot',
+                position: {
+                    row: 0,
+                    col: 1,
+                },
+                starLevel: 2,
+            },
+            {
+                name: 'KSante',
+                position: {
+                    row: 0,
+                    col: 2,
+                },
+                starLevel: 2,
+            },
+            {
+                name: 'Sett',
+                position: {
+                    row: 0,
+                    col: 3,
+                },
+                starLevel: 3,
+                headliner: true,
+                headlinerTrait: 'PopBand'
+            },
+            {
+                name: 'Yone',
+                position: {
+                    row: 0,
+                    col: 4,
+                },
+                starLevel: 2,
+            },
+            {
+                name: 'Aphelios',
+                position: {
+                    row: 3,
+                    col: 0,
+                },
+                starLevel: 3,
+            },
+            {
+                name: 'Senna',
+                position: {
+                    row: 3,
+                    col: 1,
+                },
+                starLevel: 3,
             }
         ]} language={'ko'} />
 
