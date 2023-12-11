@@ -35,7 +35,7 @@ export const Template = () => {
             },
         },
         {
-            name: 'Ziggs',
+            name: 'Evelynn',
             position: {
                 row: 2,
                 col: 0,
@@ -81,16 +81,16 @@ export const Template = () => {
       <ChampionBadge10 name={'Zac'} lang={'ko'} />
         <ChampionBadge10 name={'Gnar'} lang={'ko'} />
         <ChampionBadge10 name={'Yorick'} lang={'ko'} />
-        <ChampionBadge10 name={'Gragas'} lang={'ko'} />
+        <ChampionBadge10 name={'Evelynn'} lang={'ko'} />
         <ChampionBadge10 name={'Lulu'} lang={'ko'} />
 
       <ChampionBadge10 name={'Zac'} lang={'ko'} />
 
 
 
-      <ItemBadge10 name={'WarmogsArmor'} />
-        <ItemBadge10 name={'DragonsClaw'} />
-        <ItemBadge10 name={'BrambleVest'} />
+      <ItemBadge10 name={'BloodthirsterRadiant'} />
+        <ItemBadge10 name={'Bloodthirster'} />
+        <ItemBadge10 name={'SteraksGage'} />
       <ItemBadge10 name={'GargoyleStoneplate'} />
         <ItemBadge10 name={'Steadfast_Heart'} />
         <ItemBadge10 name={'RecurveBow'} />
@@ -108,8 +108,10 @@ export const Template = () => {
       <AugmentBadge10 name={'Three\'s_Company'} />
 
         <AugmentBadge10 name={'Contagion'} />
-        <AugmentBadge10 name={'Patient_Study'} />
-        <AugmentBadge10 name={'Level_Up!'} />
+        <AugmentBadge10 name={'Prismatic_Ticket'} />
+        <AugmentBadge10 name={`Pandora's_Items_III`} />
+        <AugmentBadge10 name={`Radiant_Relics`} />
+
         <Board10 champions={[
             {
                 name: 'KSante',
@@ -127,7 +129,7 @@ export const Template = () => {
                 },
                 starLevel: 2,
                 headliner: true,
-                headlinerTrait: 'Superfan'
+                headlinerTrait: 'Edgelord'
             },
             {
                 name: 'Lillia',
@@ -137,7 +139,7 @@ export const Template = () => {
                 },
             },
             {
-                name: 'Aphelios',
+                name: 'Garen',
                 position: {
                     row: 3,
                     col: 0,
@@ -149,6 +151,8 @@ export const Template = () => {
                     row: 3,
                     col: 1,
                 },
+                headliner: true,
+                headlinerTrait: 'Funk'
             }
         ]} />
         <Board10 champions={[
@@ -216,22 +220,17 @@ export const Template = () => {
 
         <Board10 champions={[
             {
-                name: 'Neeko',
-                position: {
-                    row: 0,
-                    col: 3,
-                },
-                starLevel: 3,
-            },
-            {
-                name: 'Ekko',
+                name: 'Yone',
                 position: {
                     row: 0,
                     col: 0,
-                }
+                },
+                starLevel: 3,
+                headliner: true,
+                headlinerTrait: 'CrowdDive'
             },
             {
-                name: 'Kennen',
+                name: 'Zed',
                 position: {
                     row: 0,
                     col: 2,
@@ -239,32 +238,52 @@ export const Template = () => {
                 starLevel: 2,
             },
             {
-                name: 'Lillia',
+                name: 'Katarina',
+                position: {
+                    row: 0,
+                    col: 3,
+                },
+                starLevel: 2,
+            },
+            {
+                name: 'Viego',
+                position: {
+                    row: 0,
+                    col: 4,
+                },
+                starLevel: 2
+            },
+            {
+                name: 'Mordekaiser',
                 position: {
                     row: 0,
                     col: 1,
-                }
+                },
+                starLevel: 2
             },
             {
-                name: 'Seraphine',
+                name: 'Ekko',
                 position: {
-                    row: 3,
-                    col: 1,
-                }
+                    row: 0,
+                    col: 5,
+                },
+                starLevel: 2,
             },
             {
-                name: 'Annie',
-                position: {
-                    row: 3,
-                    col: 0,
-                }
-            },
-            {
-                name: 'Lulu',
+                name: 'Kayle',
                 position: {
                     row: 3,
                     col: 0,
-                }
+                },
+                starLevel: 2
+            },
+            {
+                name: 'Qiyana',
+                position: {
+                    row: 0,
+                    col: 3,
+                },
+                starLevel: 1
             },
         ]} language={'ko'} />
     </>

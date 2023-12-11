@@ -23,11 +23,24 @@ const sidebars = {
         type: 'generated-index',
         title: '1티어 덱',
         description:
-            "1티어 덱 목록입니다. 매주 수요일 업데이트 됩니다.",
-        keywords: ['1tier', 'op'],
+            "롤체 1티어 덱 목록입니다. 매주 수요일 업데이트 됩니다.",
+        keywords: ['1tier', 'op', 'lolchess', 'tft'],
         image: '/img/poro1.png',
       },
-      items: ['jazz_reroll', 'stage_diver','guardian_emo', 'country_reroll', 'disco', '7kda_ahri_akali', 'sett_apel_sena'],
+      items: ['disco', '7kda_ahri_akali', 'stage_diver_yone'],
+    },
+    {
+      type: 'category',
+      label: '2티어 덱',
+      link: {
+        type: 'generated-index',
+        title: '2티어 덱',
+        description:
+            "롤체 2티어 덱 목록입니다. 매주 수요일 업데이트 됩니다.",
+        keywords: ['2tier', 'op', 'lolchess', 'tft'],
+        image: '/img/poro1.png',
+      },
+      items: ['jazz_reroll', 'stage_diver_kata','guardian_emo', 'country_reroll', 'sett_apel_sena'],
     },
   ],
 
