@@ -79,8 +79,8 @@ export const Template = () => {
     <>
       <ChampionBadge10 name={'Vi'} lang={'ko'} />
       <ChampionBadge10 name={'Zac'} lang={'ko'} />
-        <ChampionBadge10 name={'Gnar'} lang={'ko'} />
-        <ChampionBadge10 name={'Yorick'} lang={'ko'} />
+        <ChampionBadge10 name={'Kennen'} lang={'ko'} />
+        <ChampionBadge10 name={'Taric'} lang={'ko'} />
         <ChampionBadge10 name={'Evelynn'} lang={'ko'} />
         <ChampionBadge10 name={'Lulu'} lang={'ko'} />
 
@@ -103,7 +103,7 @@ export const Template = () => {
         <ItemBadge10 name={'SunfireCape'} />
 
       <AugmentBadge10 name={'Long_Distance_Pals'} />
-      <AugmentBadge10 name={'Best_Friends_II'} />
+      <AugmentBadge10 name={'Buried_Treasures_III'} />
       <AugmentBadge10 name={'Harmacist_II'} />
       <AugmentBadge10 name={'Three\'s_Company'} />
 
@@ -152,69 +152,10 @@ export const Template = () => {
                     col: 1,
                 },
                 headliner: true,
-                headlinerTrait: 'Funk'
+                headlinerTrait: 'PunkRock'
             }
         ]} />
-        <Board10 champions={[
-            {
-                name: 'Ekko',
-                position: {
-                    row: 0,
-                    col: 5,
-                },
-                starLevel: 2,
-            },
-            {
-                name: 'Urgot',
-                position: {
-                    row: 0,
-                    col: 1,
-                },
-                starLevel: 2,
-            },
-            {
-                name: 'KSante',
-                position: {
-                    row: 0,
-                    col: 2,
-                },
-                starLevel: 2,
-            },
-            {
-                name: 'Sett',
-                position: {
-                    row: 0,
-                    col: 3,
-                },
-                starLevel: 3,
-                headliner: true,
-                headlinerTrait: 'PopBand'
-            },
-            {
-                name: 'Yone',
-                position: {
-                    row: 0,
-                    col: 4,
-                },
-                starLevel: 2,
-            },
-            {
-                name: 'Aphelios',
-                position: {
-                    row: 3,
-                    col: 0,
-                },
-                starLevel: 3,
-            },
-            {
-                name: 'Senna',
-                position: {
-                    row: 3,
-                    col: 1,
-                },
-                starLevel: 3,
-            }
-        ]} language={'ko'} />
+        <Board10 champions={[{"name":"Akali","position":{"row":0,"col":1}},{"name":"Kennen","position":{"row":0,"col":2}},{"name":"Vi","position":{"row":0,"col":3}},{"name":"Thresh","position":{"row":0,"col":4}},{"name":"Yorick","position":{"row":0,"col":5}},{"name":"Jinx","position":{"row":3,"col":0}},{"name":"Twitch","position":{"row":3,"col":1}},{"name":"Lucian","position":{"row":3,"col":3}}]} language={'ko'} />
 
 
 

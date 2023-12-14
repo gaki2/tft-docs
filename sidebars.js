@@ -40,7 +40,7 @@ const sidebars = {
         keywords: ['2tier', 'op', 'lolchess', 'tft'],
         image: '/img/poro1.png',
       },
-      items: ['jazz_reroll', 'stage_diver_kata','guardian_emo', 'country_reroll', 'sett_apel_sena'],
+      items: ['jazz_reroll', 'stage_diver_kata','guardian_emo', 'country_reroll', 'sett_apel_sena', 'punk_reroll'],
     },
   ],
 
