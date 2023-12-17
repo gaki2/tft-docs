@@ -4,7 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import RemixRumble from '@site/static/img/remix_rumble_logo.png';
+import RemixRumble from '@site/static/img/remix_rumble_logo.webp';
 import Head from '@docusaurus/Head';
 
 import styles from './index.module.css';
