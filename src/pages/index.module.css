@@ -14,7 +14,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("@site/static/img/remix_rumble.png");
+  background-image: url("@site/static/img/remix_rumble.webp");
   filter: brightness(0.35);
   background-size: 100% 100%;
 }

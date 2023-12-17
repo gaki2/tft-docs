@@ -1,7 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
-import {ChampionBadge} from "tft-utils";
 import Link from "@docusaurus/Link";
 
 type FeatureItem = {
@@ -13,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: '공략 기여',
-    url: require('@site/static/img/poro1.png').default,
+    url: require('@site/static/img/poro1.webp').default,
     description: (
       <>
         공략 기여는 언제든지 환영합니다! <Link href={'https://open.kakao.com/o/gMgieVSf'}>카카오톡</Link>으로 문의해주세요.
@@ -22,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: '깃허브 참여',
-    url: require('@site/static/img/poro2.png').default,
+    url: require('@site/static/img/poro2.webp').default,
     description: (
       <>
         롤체 공략 사이트를 같이 만들어가실 기여자분들은 언제든 환영입니다!
@@ -31,7 +30,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: '버그 제보',
-    url: require('@site/static/img/poro3.png').default,
+    url: require('@site/static/img/poro3.webp').default,
     description: (
       <>
         버그제보는 <Link href={'https://open.kakao.com/o/gMgieVSf'}>카카오톡</Link> 혹은 <Link href={'https://github.com/gaki2/tft-docs'}>깃허브</Link>로 알려주세요! 😄
