@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import Link from "@docusaurus/Link";
+import {Button} from 'ui';
 
 type FeatureItem = {
   title: string;
@@ -49,6 +50,7 @@ function Feature({title, url, description}: FeatureItem) {
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
+      <Button></Button>
     </div>
   );
 }
