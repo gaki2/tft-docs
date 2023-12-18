@@ -14,8 +14,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "link": "npm link tft-utils",
-    "unlink": "npm unlink --no-save tft-utils && npm i"
+    "link": "pnpm link --global tft-utils",
+    "unlink": "pnpm unlink --global tft-utils"
   },
   "dependencies": {
     "@docusaurus/core": "3.0.0",
