@@ -1,5 +1,5 @@
 import MDXComponents from '@theme-original/MDXComponents';
-import {AugmentBadge10, Board10, ChampionBadge10, ItemBadge10, TraitBadge10} from "tft-utils";
+import {AugmentBadge10, Board10, ChampionBadge10, ItemBadge10, TraitBadge10} from "tft-ui";
 import {Gap} from "@site/src/components/mdx/Gap";
 
 export default {
