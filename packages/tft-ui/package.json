@@ -2,6 +2,7 @@
   "name": "tft-ui",
   "version": "1.0.0",
   "description": "tft team-builder",
+  "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "start": "pnpm run storybook",
@@ -15,7 +16,8 @@
     "release": "pnpm run build && changeset publish",
     "test": "vitest run",
     "link": "pnpm run build && pnpm link --global",
-    "api": "ts-node -T src/script/api/championDetail.ts"
+    "api": "ts-node -T src/script/api/championDetail.ts",
+    "markdown": "ts-node --esm src/components/editor/parser.ts"
   },
   "keywords": [
     "tft",
@@ -57,7 +59,12 @@
     "lib"
   ],
   "dependencies": {
-    "react-tooltip": "^5.21.5"
+    "react-tooltip": "^5.21.5",
+    "rehype-stringify": "^10.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.0.0",
+    "unified": "^11.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
