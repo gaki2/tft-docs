@@ -119,7 +119,7 @@ importers:
         specifier: ^1.0.8
         version: 1.0.10(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-styling':
-        specifier: ^1.3.4
+        specifier: ^1.3.7
         version: 1.3.7(@types/react-dom@18.2.18)(@types/react@18.2.45)(less@4.2.0)(postcss@8.4.32)(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)(webpack@5.88.2)
       '@storybook/blocks':
         specifier: ^7.2.2
