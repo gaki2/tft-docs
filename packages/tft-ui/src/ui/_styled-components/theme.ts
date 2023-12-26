@@ -20,6 +20,13 @@ const colors = {
   black: '#0d1216',
   black_10: 'rgba(13,18,22,.6)',
   black_20: 'rgba(13,18,22,.7)',
+
+  // 챔피언 가격 별 색상
+  cost_1: 'rgb(128, 128, 128)',
+  cost_2: 'rgb(17, 178, 136)',
+  cost_3: 'rgb(32, 122, 199)',
+  cost_4: 'rgb(196, 64, 218)',
+  cost_5: 'rgb(255, 185, 59)',
 };
 
 const theme = {
