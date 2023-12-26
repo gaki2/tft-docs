@@ -1,5 +1,4 @@
 import { PropsWithChildren, ReactElement, useContext, useState } from 'react';
-import styled from 'styled-components';
 import {
   StackNavigationContextState,
   createStackNavigationContext,
@@ -60,25 +59,33 @@ export const createStackNavigation = <T extends string>({
 
   type StackNavigationProps<T extends string> = PropsWithChildren<{
     initialStack?: T[];
+    /**
+     * @param entry 스택이 변경된 후, 보여질 entry 값
+     */
+    onChangeStack?: (entry: T) => void;
   }>;
   /**
    * @param children
    * @param initialStack 첫 스택 상태
    */
-  const StackNavigation = ({ children, initialStack }: StackNavigationProps<T>) => {
+  const StackNavigation = ({ children, initialStack, onChangeStack }: StackNavigationProps<T>) => {
     const [stack, setStack] = useState<T[]>(() => {
       return initialStack || (entries ? [entries[0]] : []);
     });
 
     const push = (entry: T) => {
-      setStack((stack) => stack.concat(entry));
+      const newStack = stack.concat(entry);
+      setStack(newStack);
+      onChangeStack?.(newStack.at(-1)!);
     };
 
     const pop = (count = 1) => {
       if (stack.length === 0) {
         return;
       }
-      setStack((stack) => stack.slice(0, stack.length - count));
+      const newStack = stack.slice(0, stack.length - count);
+      setStack(newStack);
+      onChangeStack?.(newStack.at(-1)!);
     };
 
     const clear = () => {
@@ -103,10 +110,10 @@ export const createStackNavigation = <T extends string>({
     return children({ push, pop, clear });
   };
 
-  const Entry = ({ value, children, ...props }: PropsWithChildren<{ value: T }>) => {
+  const Entry = ({ value, children }: PropsWithChildren<{ value: T }>) => {
     const { stack } = useStackNavigation();
 
-    return value === stack.at(-1) ? <_Entry {...props}>{children}</_Entry> : null;
+    return value === stack.at(-1) ? <>{children}</> : null;
   };
 
   type DynamicEntryProps<T extends string> = {
@@ -145,24 +152,3 @@ export const createStackNavigation = <T extends string>({
 const { StackNavigation, useStackNavigation } = createStackNavigation();
 
 export { StackNavigation, useStackNavigation };
-
-/**
- * TODO: 프디분들과 논의 후 공통된 Header를 만들고 DS에 넣어야함
- */
-const _Header = styled.header`
-  display: flex;
-  padding: 12px 12px 12px 20px;
-  gap: 8px;
-  align-items: center;
-  user-select: text;
-  height: 56px;
-
-  // svg 아이콘이 포함된 첫번째 자식이 있을 경우에만 padding-left를 줌
-  &:has(> :first-child svg) {
-    padding-left: 12px;
-  }
-`;
-
-const _Entry = styled.section`
-  position: relative;
-`;
