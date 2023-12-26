@@ -1,4 +1,4 @@
-import { LanguageType } from '../../../types';
+import { LanguageType } from '../../../types/lang_season';
 
 export type ItemStat =
   | 'MANA'

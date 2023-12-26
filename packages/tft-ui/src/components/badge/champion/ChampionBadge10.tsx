@@ -1,5 +1,5 @@
 import { ChampionName_10 } from '../../../data_hub/_generated/season_10/champions_season_10';
-import { LanguageType } from '../../../types';
+import { LanguageType } from '../../../types/lang_season';
 import { CommonBadgeProps } from '../common_props_type';
 import { ChampionGetter } from '../../../data_hub/getter/champion_getter';
 import { ErrorBadge } from '../ErrorBadge';

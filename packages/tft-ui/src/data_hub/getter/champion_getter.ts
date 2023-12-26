@@ -1,4 +1,4 @@
-import { Season } from '../../types';
+import { Season } from '../../types/lang_season';
 import {
   type ChampionData_10,
   champions_season_10,

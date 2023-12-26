@@ -5,7 +5,7 @@ import {
   itemStatNameMap,
   itemStatUnitMap,
 } from './item_stat_map';
-import { LanguageType } from '../../../types';
+import { LanguageType } from '../../../types/lang_season';
 import _ from 'lodash';
 
 type ItemStatProps = {

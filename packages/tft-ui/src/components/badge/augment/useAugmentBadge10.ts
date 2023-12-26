@@ -1,4 +1,4 @@
-import { LanguageType } from '../../../types';
+import { LanguageType } from '../../../types/lang_season';
 import { useMemo } from 'react';
 import { SEASON_10_BASEURL } from '../../../urls';
 import { ToDotPng, ToLowerCase } from '../../../utils/regex';

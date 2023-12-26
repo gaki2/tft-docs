@@ -1,4 +1,4 @@
-import { LanguageType } from '../../../types';
+import { LanguageType } from '../../../types/lang_season';
 import { CommonBadgeProps } from '../common_props_type';
 import { ItemGetter } from '../../../data_hub/getter/item_getter';
 import { ErrorBadge, errorText } from '../ErrorBadge';

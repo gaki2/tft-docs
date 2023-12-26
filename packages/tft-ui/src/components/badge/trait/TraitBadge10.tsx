@@ -1,5 +1,5 @@
 import { TraitName_10 } from '../../../data_hub/_generated/season_10/traits_season_10';
-import { LanguageType } from '../../../types';
+import { LanguageType } from '../../../types/lang_season';
 import { CommonBadgeProps } from '../common_props_type';
 import { useTraitBadge10 } from './useTraitBadge10';
 import { TraitGetter } from '../../../data_hub/getter/trait_getter';

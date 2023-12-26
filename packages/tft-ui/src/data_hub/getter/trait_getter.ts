@@ -1,4 +1,4 @@
-import { Season } from '../../types';
+import { Season } from '../../types/lang_season';
 import { TraitData_10, traits_season_10 } from '../_generated/season_10/traits_season_10';
 
 export class TraitGetter {
