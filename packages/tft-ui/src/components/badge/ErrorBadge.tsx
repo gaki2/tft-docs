@@ -1,4 +1,4 @@
-import { S3 } from '../../environments/urls';
+import { S3 } from '../../urls';
 import { Tooltip } from '../../ui/tooltip/Tooltip';
 
 type ErrorBadgeProps = {

@@ -1,4 +1,4 @@
-import { DeepNullable, SplitTwice } from '../../types/utilType';
+import { DeepNullable, SplitTwice } from '../../../types/utilType';
 
 export const augments_season_10 = {
   TFT10_Augment_Salvage_Bin: {

@@ -1,4 +1,4 @@
-import { Season } from '../types';
+import { Season } from '../../types';
 import { AugmentData_10, augments_season_10 } from '../_generated/season_10/augments_season_10';
 
 export class AugmentGetter {

@@ -2,10 +2,10 @@ import { join } from 'lodash';
 import { Meta, StoryFn } from '@storybook/react';
 import styled from 'styled-components';
 import { TraitBadge10, TraitBadge10Props } from './TraitBadge10';
-import { traits_season_10 } from '../../../_generated/season_10/traits_season_10';
+import { traits_season_10 } from '../../../data_hub/_generated/season_10/traits_season_10';
 
 const meta = {
-  title: 'Example/Badge/Trait',
+  title: 'Badge/Trait',
   component: TraitBadge10,
   parameters: {
     layout: 'centered',

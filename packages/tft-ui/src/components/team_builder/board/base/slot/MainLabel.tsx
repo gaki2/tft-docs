@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { LanguageType } from '../../../../../../types';
+import { LanguageType } from '../../../../../types/lang_season';
 
-export const Rule = () => {
+export const MainLabel = () => {
   return <Wrapper>{'Main'}</Wrapper>;
 };
 

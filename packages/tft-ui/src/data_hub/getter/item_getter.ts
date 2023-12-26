@@ -1,4 +1,4 @@
-import { Season } from '../types';
+import { Season } from '../../types';
 import { ItemData_10, items_season_10 } from '../_generated/season_10/items_season_10';
 
 export class ItemGetter {

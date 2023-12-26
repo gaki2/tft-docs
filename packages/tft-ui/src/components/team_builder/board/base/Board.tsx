@@ -1,9 +1,8 @@
 import { MemoizedSlot } from './slot/Slot';
-import { SlotIndex } from '../../../../types/board';
-import { LanguageType, Season } from '../../../../types/config';
+import { LanguageType, Season } from '../../../../types/lang_season';
 import styled from 'styled-components';
 import { TraitList } from './trait_list/TraitList';
-import { Board as BoardModel } from './class/Board';
+import { BoardModel as BoardModel } from './BoardModel';
 
 export type BoardProps = {
   board: BoardModel;
@@ -26,7 +25,7 @@ export const Board = (props: BoardProps) => {
             key={idx}
             board={board}
             slotData={slotData}
-            slotIdx={idx as SlotIndex}
+            slotIdx={idx}
             season={season}
             language={language}
           />

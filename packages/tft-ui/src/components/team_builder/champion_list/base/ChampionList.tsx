@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { WithPrimitive } from '../../../../types/primitive';
-import { LanguageType, Season } from '../../../../types';
+import { LanguageType, Season } from '../../../../types/lang_season';
 import { useState } from 'react';
 import sortBy from 'lodash/sortBy';
 

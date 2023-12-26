@@ -1,8 +1,15 @@
-import { Position } from '../../../../../types/board';
-import { LanguageType, Season } from '../../../../../types';
-import { ChampionGetter } from '../../../../../getter/champion_getter';
-import { ToDotPng, ToLowerCase } from '../../../../../utils/regex';
-import { SEASON_10_BASEURL } from '../../../../../environments/urls';
+import { LanguageType, Season } from '../../../../types/lang_season';
+
+type Position = {
+  /**
+   * 범위: 0~3
+   */
+  row: number;
+  /**
+   * 범위: 0~6
+   */
+  col: number;
+};
 
 export const BOARD_ROW_COUNT = 4;
 export const BOARD_COL_COUNT = 7;
@@ -42,7 +49,7 @@ export type BoardModelState = {
 // execute when `slots` state is changed
 export type slotsStateListener = (state?: BoardModelState) => void;
 
-export class Board {
+export class BoardModel {
   private state: BoardModelState;
   private slotsStateListener: slotsStateListener;
   private season: Season;

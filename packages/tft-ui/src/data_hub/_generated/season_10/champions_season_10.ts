@@ -1,4 +1,4 @@
-import { DeepNullable, Split } from '../../types/utilType';
+import { DeepNullable, Split } from '../../../types/utilType';
 
 export const champions_season_10 = {
   TFT10_Ahri: {

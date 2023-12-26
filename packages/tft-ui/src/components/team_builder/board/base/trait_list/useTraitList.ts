@@ -1,7 +1,7 @@
-import { SlotData } from '../class/Board';
-import { TraitGetter } from '../../../../../getter/trait_getter';
-import { LanguageType, Season } from '../../../../../types';
-import { SEASON_10_BASEURL } from '../../../../../environments/urls';
+import { SlotData } from '../BoardModel';
+import { TraitGetter } from '../../../../../data_hub/getter/trait_getter';
+import { LanguageType, Season } from '../../../../../types/lang_season';
+import { SEASON_10_BASEURL } from '../../../../../urls';
 import { ToDotPng, ToLowerCase } from '../../../../../utils/regex';
 
 type UseTraitListProps = {

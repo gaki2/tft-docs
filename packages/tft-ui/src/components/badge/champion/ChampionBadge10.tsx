@@ -1,7 +1,7 @@
-import { ChampionName_10 } from '../../../_generated/season_10/champions_season_10';
+import { ChampionName_10 } from '../../../data_hub/_generated/season_10/champions_season_10';
 import { LanguageType } from '../../../types';
 import { CommonBadgeProps } from '../common_props_type';
-import { ChampionGetter } from '../../../getter/champion_getter';
+import { ChampionGetter } from '../../../data_hub/getter/champion_getter';
 import { ErrorBadge } from '../ErrorBadge';
 import { useChampionBadge10 } from './useChampionBadge10';
 import { ChampionBadge } from './ChampionBadge';

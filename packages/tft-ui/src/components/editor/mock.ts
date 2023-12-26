@@ -1,6 +1,6 @@
-import { champions_season_10 } from '../../_generated/season_10/champions_season_10';
+import { champions_season_10 } from '../../data_hub/_generated/season_10/champions_season_10';
 import { ToDotPng, ToLowerCase } from '../../utils/regex';
-import { SEASON_10_BASEURL } from '../../environments/urls';
+import { SEASON_10_BASEURL } from '../../urls';
 
 export type ChampMock = {
   name: string;

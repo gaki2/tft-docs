@@ -1,4 +1,4 @@
-import { DeepNullable, SplitTwice } from '../../types/utilType';
+import { DeepNullable, SplitTwice } from '../../../types/utilType';
 
 export const items_season_10 = {
   TFT_Consumable_NeekosHelp: {

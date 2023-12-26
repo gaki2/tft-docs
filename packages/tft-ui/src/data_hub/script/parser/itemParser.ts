@@ -1,9 +1,8 @@
-import { GeneralParser } from './generalParser';
-import { Season } from '../../types';
+import { Season } from '../../../types/lang_season';
 import path from 'path';
-import { LANGUAGES } from '../../types/config';
+import { LANGUAGES } from '../../../types/lang_season';
 import _ from 'lodash';
-import { General } from '../general';
+import { FileSystem } from '../../../utils/file_system';
 
 const BRANCHES = ['desc', 'name'];
 
@@ -21,7 +20,7 @@ export type ItemData_10 = DeepNullable<(typeof items_season_10)['TFT_Item_Bloodt
 
 export class ItemParser {
   static getItemIdList(season: Season) {
-    const itemListDataSet = GeneralParser.readFileSync(`${jsonDir}/${season}/tft-item.json`);
+    const itemListDataSet = FileSystem.readFileSync(`${jsonDir}/${season}/tft-item.json`);
     const itemData = JSON.parse(itemListDataSet).data;
 
     if (Object.keys(itemData).length === 0) {
@@ -34,7 +33,7 @@ export class ItemParser {
   static getItemData(season: Season, itemList: ReturnType<typeof this.getItemIdList>) {
     const itemDataMap = LANGUAGES.reduce((acc, language) => {
       const dataSet = JSON.parse(
-        GeneralParser.readFileSync(`${jsonDir}/${season}/tft_data_${language}.json`)
+        FileSystem.readFileSync(`${jsonDir}/${season}/tft_data_${language}.json`)
       ).items;
 
       for (let i = 0; i < itemList.length; i++) {
@@ -65,7 +64,7 @@ export const items_${season} = ${JSON.stringify(itemDataMap, null, 2)}
 ${getAdditionalText(season)}
   `;
 
-    return General.writeFile(`${generatedDir}/${season}/items_${season}.ts`, ret);
+    return FileSystem.writeFile(`${generatedDir}/${season}/items_${season}.ts`, ret);
   }
 }
 

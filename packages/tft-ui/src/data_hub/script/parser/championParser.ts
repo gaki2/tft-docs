@@ -1,8 +1,8 @@
-import { LanguageType, Season } from '../../types';
-import { General } from '../general';
+import { LanguageType, Season } from '../../../types/lang_season';
+import { FileSystem } from '../../../utils/file_system';
 import _ from 'lodash';
 import path from 'path';
-import { SEASON_SET_DATA_IDX_MAP } from '../../types/config';
+import { SEASON_SET_DATA_IDX_MAP } from '../../../types/lang_season';
 
 const BRANCHS_MAP = {
   season_10: ['ability.desc', 'ability.name', 'name', 'traits'],
@@ -39,8 +39,8 @@ export class ChampionParser {
      *   ...
      * } 과 같은 형태이다.
      */
-    const dataSet = General.readFileSync(`${jsonDir}/${season}/tft_data_${language}.json`);
-    const parsedDataSet = General.parse(dataSet);
+    const dataSet = FileSystem.readFileSync(`${jsonDir}/${season}/tft_data_${language}.json`);
+    const parsedDataSet = JSON.parse(dataSet);
     /**
      * championData 는 다음과 같은 형태로 들어있다.
      * [
@@ -64,7 +64,7 @@ export class ChampionParser {
       return acc;
     }, {} as { [key: string]: any });
 
-    return General.writeFile(
+    return FileSystem.writeFile(
       `${jsonDir}/${season}/champion_data_${language}.json`,
       JSON.stringify(parsed_championData, null, 2)
     );
@@ -87,10 +87,10 @@ export class ChampionParser {
      * }
      */
     const championDataMap = languages.reduce((acc, language) => {
-      const championDataSet = General.readFileSync(
+      const championDataSet = FileSystem.readFileSync(
         `${jsonDir}/${season}/champion_data_${language}.json`
       );
-      const parsedChampionDataSet = General.parse(championDataSet);
+      const parsedChampionDataSet = JSON.parse(championDataSet);
 
       acc[language] = parsedChampionDataSet;
       return acc;
@@ -146,7 +146,7 @@ export const champions_${season} = ${JSON.stringify(merged_data, null, 2)}
 ${getAdditionalText(season)}
   `;
 
-    return General.writeFile(`${generatedDir}/${season}/champions_${season}.ts`, ret);
+    return FileSystem.writeFile(`${generatedDir}/${season}/champions_${season}.ts`, ret);
   }
 }
 

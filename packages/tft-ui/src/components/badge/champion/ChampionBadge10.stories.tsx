@@ -1,10 +1,10 @@
 import type { Meta, StoryFn } from '@storybook/react';
 import { ChampionBadge10, ChampionBadge10Props } from './ChampionBadge10';
-import { champions_season_10 } from '../../../_generated/season_10/champions_season_10';
+import { champions_season_10 } from '../../../data_hub/_generated/season_10/champions_season_10';
 import styled from 'styled-components';
 
 const meta = {
-  title: 'Example/Badge/Champion',
+  title: 'Badge/Champion',
   component: ChampionBadge10,
   parameters: {
     layout: 'centered',
