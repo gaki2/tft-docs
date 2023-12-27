@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { WithPrimitive } from '../../../../types/primitive';
 import { LanguageType, Season } from '../../../../types/lang_season';
 import { useState } from 'react';
-import sortBy from 'lodash/sortBy';
+import _ from 'lodash';
 
 type ChampionList = {
   name: string;
@@ -39,7 +39,7 @@ export const ChampionList = (props: ChampionListProps) => {
         <Input onChange={onChange} />
       </Header>
       <Content>
-        {sortBy(filteredList, 'cost').map((item) => {
+        {_.sortBy(filteredList, 'cost').map((item) => {
           return (
             <Item
               url={item.url}
