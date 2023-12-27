@@ -26,4 +26,4 @@ yarn-error.log*
 /lib
 .idea
 
-/src/script/api
+/src/data_hub/script/api

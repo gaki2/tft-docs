@@ -1,5 +1,5 @@
-import { LanguageType } from '../../../types';
-import { TraitData_10 } from '../../../_generated/season_10/traits_season_10';
+import { LanguageType } from '../../../types/lang_season';
+import { TraitData_10 } from '../../../data_hub/_generated/season_10/traits_season_10';
 import { getTraitIconUrl10 } from './trait_utils';
 
 type UseTraitBadge10Props = TraitData_10 & {

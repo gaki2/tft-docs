@@ -1,10 +1,10 @@
-import { AugmentGetter } from '../../../getter/augment_getter';
+import { AugmentGetter } from '../../../data_hub/getter/augment_getter';
 import { ErrorBadge, errorText } from '../ErrorBadge';
 import { AugmentBadge } from './AugmentBadge';
 import { CommonBadgeProps } from '../common_props_type';
-import { LanguageType } from '../../../types';
+import { LanguageType } from '../../../types/lang_season';
 import { useAugmentBadge10 } from './useAugmentBadge10';
-import { AugmentName_10 } from '../../../_generated/season_10/augments_season_10';
+import { AugmentName_10 } from '../../../data_hub/_generated/season_10/augments_season_10';
 
 export type AugmentBadge10Props = {
   name: AugmentName_10;

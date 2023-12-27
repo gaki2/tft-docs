@@ -2,7 +2,7 @@ import type { Meta } from '@storybook/react';
 import { Board10, BoardChampion10 } from './Board10';
 
 const meta = {
-  title: 'Example/Board/Season10',
+  title: 'Builder/Season10',
   component: Board10,
   parameters: {
     layout: 'centered',

@@ -1,10 +1,10 @@
-import { LanguageType } from '../../../types';
+import { LanguageType } from '../../../types/lang_season';
 import { CommonBadgeProps } from '../common_props_type';
-import { ItemGetter } from '../../../getter/item_getter';
+import { ItemGetter } from '../../../data_hub/getter/item_getter';
 import { ErrorBadge, errorText } from '../ErrorBadge';
 import { useItemBadge10 } from './useItemBadge10';
 import { ItemBadge } from './ItemBadge';
-import { ItemName_10 } from '../../../_generated/season_10/items_season_10';
+import { ItemName_10 } from '../../../data_hub/_generated/season_10/items_season_10';
 
 export type ItemBadge10Props = {
   name: ItemName_10;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { LanguageType, Season } from '../../../../../types';
-import { SlotData } from '../class/Board';
+import { SlotData } from '../BoardModel';
 import { useTraitList } from './useTraitList';
 import { TraitItem } from './TraitItem';
 

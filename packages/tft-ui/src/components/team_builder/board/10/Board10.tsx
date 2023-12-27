@@ -1,10 +1,10 @@
 import {
   ChampionName_10,
   champions_season_10,
-} from '../../../../_generated/season_10/champions_season_10';
-import { MetaData } from '../base/class/Board';
+} from '../../../../data_hub/_generated/season_10/champions_season_10';
+import { MetaData } from '../base/BoardModel';
 import { Board, BoardProps } from '../base/Board';
-import { TraitName_10 } from '../../../../_generated/season_10/traits_season_10';
+import { TraitName_10 } from '../../../../data_hub/_generated/season_10/traits_season_10';
 import { useBoard } from '../base/useBoard';
 import styled from 'styled-components';
 import { ChampionList } from '../../champion_list/base/ChampionList';

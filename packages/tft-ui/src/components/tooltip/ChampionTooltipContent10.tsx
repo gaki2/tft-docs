@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { skills_season_10 } from '../../_generated/season_10/skill_season_10';
-import { TraitGetter } from '../../getter/trait_getter';
+import { skills_season_10 } from '../../data_hub/_generated/season_10/skill_season_10';
+import { TraitGetter } from '../../data_hub/getter/trait_getter';
 import { useMemo } from 'react';
 import { getTraitIconUrl10 } from '../badge/trait/trait_utils';
 import { filterNullable } from '../../utils/my_utils';

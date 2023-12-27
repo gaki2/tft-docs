@@ -1,4 +1,4 @@
-import { LanguageType } from '../../../types/config';
+import { LanguageType } from '../../../types/lang_season';
 import { useMemo } from 'react';
 import styled from 'styled-components';
 import { Tooltip } from '../../../ui/tooltip/Tooltip';

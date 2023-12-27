@@ -1,6 +1,6 @@
-import { LanguageType, Season } from '../../../types';
-import { ChampionGetter } from '../../../getter/champion_getter';
-import { SEASON_10_BASEURL } from '../../../environments/urls';
+import { LanguageType, Season } from '../../../types/lang_season';
+import { ChampionGetter } from '../../../data_hub/getter/champion_getter';
+import { SEASON_10_BASEURL } from '../../../urls';
 import { ToDotPng, ToLowerCase } from '../../../utils/regex';
 
 export const championUrlHelper = (tileIcon: string, season: Season) => {

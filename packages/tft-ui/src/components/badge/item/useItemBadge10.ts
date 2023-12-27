@@ -1,4 +1,4 @@
-import { LanguageType } from '../../../types';
+import { LanguageType } from '../../../types/lang_season';
 import { useMemo } from 'react';
 import {
   applyRegex,
@@ -8,9 +8,9 @@ import {
   ToDotPng,
   ToLowerCase,
 } from '../../../utils/regex';
-import { ItemGetter } from '../../../getter/item_getter';
-import { SEASON_10_BASEURL } from '../../../environments/urls';
-import { ItemData_10 } from '../../../_generated/season_10/items_season_10';
+import { ItemGetter } from '../../../data_hub/getter/item_getter';
+import { SEASON_10_BASEURL } from '../../../urls';
+import { ItemData_10 } from '../../../data_hub/_generated/season_10/items_season_10';
 import { replaceVariables } from '../../../utils/replaceVariables';
 
 type UseItemBadge10Props = ItemData_10 & {

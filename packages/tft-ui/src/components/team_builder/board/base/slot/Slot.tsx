@@ -1,16 +1,15 @@
 import React, { useRef } from 'react';
-import { Board, SlotData } from '../class/Board';
-import { SlotIndex } from '../../../../../types/board';
-import { LanguageType, Season } from '../../../../../types/config';
+import { BoardModel, SlotData } from '../BoardModel';
+import { LanguageType, Season } from '../../../../../types/lang_season';
 import styled from 'styled-components';
-import { Rule } from './label/Rule';
-import { StarLevel } from './star/StarLevel';
-import { SEASON_10_BASEURL } from '../../../../../environments/urls';
+import { MainLabel } from './MainLabel';
+import { StarLevel } from './StarLevel';
+import { SEASON_10_BASEURL } from '../../../../../urls';
 
 type SlotProps = {
-  board: Board;
+  board: BoardModel;
   slotData: SlotData | null;
-  slotIdx: SlotIndex;
+  slotIdx: number;
   season: Season;
   language: LanguageType;
 };
@@ -75,7 +74,7 @@ const Slot = ({ board, slotData, slotIdx, season, language }: SlotProps) => {
         )}
         <StyledBorder cost={slotData?.cost} headliner={Boolean(slotData?.headliner)}>
           <StyledImageDiv ref={imageDivRef} url={slotData?.url ?? ''} />
-          {slotData?.main && <Rule />}
+          {slotData?.main && <MainLabel />}
           {Boolean(slotData) && <StyledChampionName>{slotData?.name}</StyledChampionName>}
         </StyledBorder>
         {slotData?.starLevel && <StarLevel starLevel={slotData?.starLevel} />}

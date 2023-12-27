@@ -12,6 +12,6 @@ export default defineConfig({
     // dom, window 객체들을 jsdom 에서 가져온다.
     environment: 'jsdom',
     // setup 파일 위치
-    setupFiles: './src/config/vitest.setup.ts',
+    setupFiles: './src/vitest/vitest.setup.ts',
   },
 });
