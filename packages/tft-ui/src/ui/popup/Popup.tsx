@@ -11,9 +11,14 @@ export type PopupProps = WithPrimitive<
     top: number;
     ref: React.RefObject<HTMLDivElement>;
     overlayColor?: string;
+    /**
+     * @default true
+     */
+    closeOnEsc?: boolean;
   }>
 >;
 
+// 눈에 보이지 않는 Overlay 를 렌더링하며, Overlay 를 클릭할 경우 팝업이 꺼진다.
 export const Popup = forwardRef<HTMLDivElement, PopupProps>((props, ref) => {
   const { show, onClose, className, style, children } = props;
   const { getOverlayProps, getPopupProps } = usePopup(props);
@@ -29,3 +34,5 @@ export const Popup = forwardRef<HTMLDivElement, PopupProps>((props, ref) => {
     </Portal>
   );
 });
+
+Popup.displayName = 'POPUP';
