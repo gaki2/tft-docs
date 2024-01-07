@@ -23,7 +23,7 @@ export const ChampionBadge = (props: ChampionBadgeProps) => {
 
   return (
     <>
-      <Wrapper data-tooltip-id={tooltipId} style={style}>
+      <Wrapper data-tooltip-id={tooltipId} style={style} contentEditable={'false'}>
         <Img src={url} alt={name} cost={cost} />
         <Border cost={cost} />
       </Wrapper>
@@ -32,14 +32,14 @@ export const ChampionBadge = (props: ChampionBadgeProps) => {
   );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.span`
   width: 34px;
   height: 34px;
-  display: inline-block;
   position: relative;
   vertical-align: middle;
   overflow: hidden;
   font-size: 10px;
+  display: inline-flex;
 
   user-select: none;
 `;
@@ -51,7 +51,7 @@ const Img = styled.img<{ cost: number }>`
   border-radius: 4px;
 `;
 
-const Border = styled.div<{ cost: number }>`
+const Border = styled.span<{ cost: number }>`
   --1_cost_border: rgb(128, 128, 128);
   --2_cost_border: rgb(17, 178, 136);
   --3_cost_border: rgb(32, 122, 199);
