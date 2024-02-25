@@ -2,7 +2,7 @@ import { CSSProperties, HTMLAttributes, useCallback, useEffect } from 'react';
 import { PopupProps } from './Popup';
 
 export const usePopup = (props: PopupProps) => {
-  const { onClose, overlayColor, left, top } = props;
+  const { onClose, overlayColor, left, top, closeOnEsc } = props;
 
   const getOverlayProps = useCallback<() => HTMLAttributes<HTMLDivElement>>(() => {
     return {
@@ -20,7 +20,7 @@ export const usePopup = (props: PopupProps) => {
 
   useEffect(() => {
     const keydownHandler = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (closeOnEsc && e.key === 'Escape') {
         onClose();
       }
     };

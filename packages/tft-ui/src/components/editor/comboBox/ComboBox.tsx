@@ -1,10 +1,10 @@
-import { StackNavigation } from '../../ui/stack_navigation/StackNavigation';
+import { StackNavigation } from '../../../ui/stack_navigation/StackNavigation';
 import styled from 'styled-components';
 import { MagnifyingGlassIcon, CrossCircledIcon, CaretLeftIcon } from '@radix-ui/react-icons';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { S3 } from '../../urls';
-import { useChampionSearch } from './useChampionSearch';
-import { useItemSearch } from './useItemSearch';
+import { S3 } from '../../../urls';
+import { useChampionSearch } from '../useChampionSearch';
+import { useItemSearch } from '../useItemSearch';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 type Entry = 'default' | 'champion' | 'item' | 'augment' | 'builder';
@@ -17,10 +17,9 @@ const DEFAULT_LIST_ITEMS: { name: string; url: string; targetEntry: Entry }[] = 
   // { name: '배치툴', url: `${S3}/comboBox/tft_builder.webp`, targetEntry: 'builder' },
 ];
 
-type ComboBoxProps = {
-  // esc, space, /, delete 를 눌렀을때 팝업이 꺼지는 기능을 구현하기 위해 외부에서 콜백을 주입받도록 만듦
-  onKeyDown?: (e: KeyboardEvent) => void;
-  onSelect?: ({ entry, value }: { entry: Entry; value: string }) => void;
+export type ComboBoxProps = {
+  onKeyDown: (e: KeyboardEvent) => void;
+  onSelect: ({ type, value }: { type: Entry; value: string }) => void;
 };
 
 // enter 를 눌렀을때 push 함수를 실행해야 해서 _ComboBox 에 StackNavigation 을 래핑했음.
@@ -97,6 +96,7 @@ const _ComboBox = (props: _ComboBoxProps) => {
       }
 
       if (e.key === 'Enter') {
+        e.preventDefault();
         const lists = Array.from(listWrapperRef.current?.getElementsByTagName('li') ?? []);
         const currentActiveIdx = lists.findIndex(
           (list) => list.getAttribute('aria-selected') === 'true'
@@ -105,12 +105,15 @@ const _ComboBox = (props: _ComboBoxProps) => {
         const entry = currentActiveList?.getAttribute('data-entry') as Entry;
         const nextEntry = currentActiveList?.getAttribute('data-targetentry') as Entry;
         const championName = currentActiveList?.getAttribute('data-championname');
-
+        const itemName = currentActiveList?.getAttribute('data-itemname');
         let value = '';
 
         switch (entry) {
           case 'champion':
             value = championName ?? '';
+            break;
+          case 'item':
+            value = itemName ?? '';
             break;
           case 'default':
             value = nextEntry;
@@ -120,7 +123,10 @@ const _ComboBox = (props: _ComboBoxProps) => {
             value = inputValue;
             break;
         }
-        onSelect?.({ entry, value });
+
+        if (entry !== 'default') {
+          onSelect({ type: entry, value });
+        }
       }
     };
 
@@ -148,7 +154,7 @@ const _ComboBox = (props: _ComboBoxProps) => {
       <StackNavigation.Header>
         {({ stack, pop, push, clear }) => {
           return (
-            <HeaderWrapper>
+            <HeaderWrapper role='combobox'>
               <IconButtonWrapper>
                 {stack.length > 1 ? (
                   <IconButton aria-label={'back to prev panel'}>
@@ -171,6 +177,7 @@ const _ComboBox = (props: _ComboBoxProps) => {
                 value={inputValue}
                 onChange={onChange}
                 placeholder={'챔피언, 아이템, 증강을 검색해보세요.'}
+                autoFocus={true}
               />
               {inputValue && (
                 <XButton onClick={onClickXButton} aria-label={'clear input value'}>
@@ -226,6 +233,7 @@ const _ComboBox = (props: _ComboBoxProps) => {
               key={idx}
               aria-selected={idx === activeIndex}
               role='button'
+              onClick={() => onSelect({ type: 'champion', value: listData.apiName.split('_')[1] })}
               data-entry='champion'
               data-championname={listData.apiName.split('_')[1]}>
               {/* tabIndex={-1} 은 탭으로 버튼이 focus 되는 동작을 막기 위해 추가함. (기획) */}
@@ -250,7 +258,8 @@ const _ComboBox = (props: _ComboBoxProps) => {
               key={idx}
               aria-selected={idx === activeIndex}
               role='button'
-              data-entry='champion'
+              onClick={() => onSelect({ type: 'item', value: listData.apiName.split('_')[2] })}
+              data-entry='item'
               data-itemname={listData.apiName.split('_')[2]}>
               <ListWrapperButton tabIndex={-1}>
                 <ListItemImg
@@ -396,7 +405,8 @@ const ListItemImg = styled(LazyLoadImage)<{ cost?: number }>`
   height: 24px;
   ${({ theme }) => theme.flex.center};
   object-fit: cover;
-  outline: ${({ cost, theme }) => (cost ? `2px solid ${theme.colors[`cost_${cost}`]}` : 'none')};
+  outline: ${({ cost, theme }) =>
+    cost ? `2px solid ${theme.colors[`cost_${cost as 1 | 2 | 3 | 4 | 5}`]}` : 'none'};
   border-radius: 2px;
 `;
 
